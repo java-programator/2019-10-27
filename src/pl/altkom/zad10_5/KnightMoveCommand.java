@@ -1,23 +1,23 @@
 package pl.altkom.zad10_5;
 
-public class GoLeftCommand implements Command {
-    int steps;
-
-    public GoLeftCommand(int steps) {
-        this.steps = steps;
-    }
-
+public class KnightMoveCommand implements Command {
     @Override
     public void execute(RobotOperator operator) {
         int x = operator.getX();
-        x = x - steps;
+        int y = operator.getY();
+        x = x + 1;
+        y = y + 2;
         operator.setX(x);
+        operator.setY(y);
     }
 
     @Override
     public void undo(RobotOperator operator) {
         int x = operator.getX();
-        x = x + steps;
+        int y = operator.getY();
+        x = x - 1;
+        y = y - 2;
         operator.setX(x);
+        operator.setY(y);
     }
 }
