@@ -18,11 +18,10 @@ public class RobotOperator {
         commands.push(command);
     }
 
-    public void undo(){
+    public void undo() {
         Command command = commands.pop();
         command.undo(this);
     }
-
 
     public int getX() {
         return x;
