@@ -2,6 +2,7 @@ package pl.altkom.zad10_7;
 
 public class Start {
     public static void main(String[] args) {
+
         FireWall f = FireWall.getInstance();
 
         Observer o1 = new EventLogger();
