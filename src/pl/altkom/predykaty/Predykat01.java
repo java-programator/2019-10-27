@@ -1,4 +1,4 @@
-package pl.altkom;
+package pl.altkom.predykaty;
 
 import java.util.function.Predicate;
 
