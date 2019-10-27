@@ -13,4 +13,11 @@ public class GoLeftCommand implements Command {
         x = x - steps;
         operator.setX(x);
     }
+
+    @Override
+    public void undo(RobotOperator operator) {
+        int x = operator.getX();
+        x = x + steps;
+        operator.setX(x);
+    }
 }
